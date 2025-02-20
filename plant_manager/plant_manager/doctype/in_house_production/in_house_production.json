@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-24 19:35:00.707992",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "employee",
+  "column_break_dytw",
+  "login_date",
+  "production_log_table_section",
+  "production_log",
+  "status_tab",
+  "section_break_oj2g",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_oj2g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "In-House Production",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Work Force"
+  },
+  {
+   "fieldname": "column_break_dytw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_date",
+   "fieldtype": "Date",
+   "label": "Login Date"
+  },
+  {
+   "fieldname": "production_log_table_section",
+   "fieldtype": "Section Break",
+   "label": "Production Log Table"
+  },
+  {
+   "fieldname": "production_log",
+   "fieldtype": "Table",
+   "label": "Production Log",
+   "options": "Production Log Table"
+  },
+  {
+   "fieldname": "status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-24 19:56:03.701970",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "In-House Production",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

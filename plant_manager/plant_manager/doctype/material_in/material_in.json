@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-23 19:38:39.897505",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "supplier_info_section",
+  "naming_series",
+  "vdr",
+  "column_break_fghg",
+  "p_date",
+  "vdr_code",
+  "default_stock_warehouse_section",
+  "d_from_warehouse",
+  "column_break_ynvv",
+  "d_to_warehouse",
+  "component_table_section",
+  "component_table",
+  "status_tab",
+  "section_break_qtb3",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier_info_section",
+   "fieldtype": "Section Break",
+   "label": "Supplier Info"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "vdr",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "Vendor"
+  },
+  {
+   "fieldname": "column_break_fghg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "p_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fetch_from": "vdr.vendor_code",
+   "fieldname": "vdr_code",
+   "fieldtype": "Data",
+   "label": "Vendor Code"
+  },
+  {
+   "fieldname": "default_stock_warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Default Stock Warehouse"
+  },
+  {
+   "fieldname": "d_from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "column_break_ynvv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "d_to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "component_table_section",
+   "fieldtype": "Section Break",
+   "label": "Component Table"
+  },
+  {
+   "fieldname": "component_table",
+   "fieldtype": "Table",
+   "label": "Component Table",
+   "options": "Material In Table"
+  },
+  {
+   "fieldname": "status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "section_break_qtb3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material In",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material In",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-30 12:31:38.234388",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Material In",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{comp_code}-{operation_code}",
+ "creation": "2025-01-03 19:25:51.032709",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title_section",
+  "title",
+  "column_break_jsys",
+  "is_manual_operation",
+  "details_section",
+  "operation_code",
+  "comp_code",
+  "column_break_tdvu",
+  "operation_name",
+  "comp_name",
+  "description_section",
+  "detail_description",
+  "operation_station_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "title_section",
+   "fieldtype": "Section Break",
+   "label": "Title"
+  },
+  {
+   "default": "{operation_name}-{comp_name}",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "operation_code",
+   "fieldtype": "Data",
+   "label": "Operation Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "comp_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Component Code",
+   "options": "Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tdvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "label": "Operation Name"
+  },
+  {
+   "fetch_from": "comp_code.component_name",
+   "fieldname": "comp_name",
+   "fieldtype": "Data",
+   "label": "Component Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "detail_description",
+   "fieldtype": "Text",
+   "label": "Detail description"
+  },
+  {
+   "fieldname": "operation_station_tab",
+   "fieldtype": "Tab Break",
+   "label": "Operation Station"
+  },
+  {
+   "fieldname": "column_break_jsys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Tick only if its is supportive operation like Deburring, Chamfering, Polishing & similar operations",
+   "fieldname": "is_manual_operation",
+   "fieldtype": "Check",
+   "label": "is manual operation?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-25 13:03:16.351520",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Process Operation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

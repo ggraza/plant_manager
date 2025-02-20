@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_Series:",
+ "creation": "2023-05-09 16:09:04.501558",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "stat",
+  "b_date",
+  "column_break_3",
+  "comp_code",
+  "comp_name",
+  "section_break_6",
+  "bq",
+  "purchase_details_section",
+  "inv",
+  "atr",
+  "section_break_12",
+  "ti_qty",
+  "trew_qty",
+  "bs",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": ".YY.B.MM.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "stat",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Batch Status",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "b_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Batch Created Date"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break",
+   "label": "Part details"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bq",
+   "fieldtype": "Int",
+   "label": "Batch Qty"
+  },
+  {
+   "fieldname": "purchase_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "inv",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Purchase Invoice",
+   "permlevel": 2
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "inv.atr",
+   "fieldname": "atr",
+   "fieldtype": "Data",
+   "label": "Against A.T.R",
+   "permlevel": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "ti_qty",
+   "fieldtype": "Float",
+   "label": "Total Inspected Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "trew_qty",
+   "fieldtype": "Float",
+   "label": "Total under Rework",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bs",
+   "fieldtype": "Table",
+   "label": "Batch Inspection Status",
+   "options": "Plant Batch Status",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Plant Batch Number",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "comp_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Component Code",
+   "options": "Component"
+  },
+  {
+   "fetch_from": "comp_code.component_name",
+   "fieldname": "comp_name",
+   "fieldtype": "Data",
+   "label": "Component Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-22 16:24:23.706331",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Plant Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

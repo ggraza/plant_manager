@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "autoname": "{YY}{MM}BH-{.###}",
+ "creation": "2024-12-14 18:09:05.765280",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "item_details_column",
+  "comp_code",
+  "pwo_qty",
+  "column_break_qjui",
+  "comp_name",
+  "fy",
+  "pwo_date",
+  "pwo_status_section",
+  "pwo_status",
+  "comp_qty",
+  "rwk_qty",
+  "column_break_hyyr",
+  "disp_qty",
+  "conv_qty",
+  "rej_qty",
+  "operation_status_tab",
+  "osd",
+  "stock_and_status_entry_list_tab",
+  "production_log_section",
+  "ssl_entry",
+  "dispatch_entry_list_tab",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_details_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qjui",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Component Details"
+  },
+  {
+   "fieldname": "comp_code",
+   "fieldtype": "Link",
+   "label": "Component Code",
+   "options": "Component"
+  },
+  {
+   "fieldname": "pwo_qty",
+   "fieldtype": "Int",
+   "label": "P.W.O Quantity"
+  },
+  {
+   "fetch_from": "comp_code.component_name",
+   "fetch_if_empty": 1,
+   "fieldname": "comp_name",
+   "fieldtype": "Data",
+   "label": "Component Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fy",
+   "fieldtype": "Link",
+   "label": "Financial Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "pwo_status_section",
+   "fieldtype": "Section Break",
+   "label": "P.W.O Status"
+  },
+  {
+   "fieldname": "pwo_status",
+   "fieldtype": "Select",
+   "label": "PWO Status",
+   "options": "Open\nCompleted\nClosed"
+  },
+  {
+   "fieldname": "comp_qty",
+   "fieldtype": "Int",
+   "label": "Completed Qty"
+  },
+  {
+   "fieldname": "rwk_qty",
+   "fieldtype": "Int",
+   "label": "Rework Qty"
+  },
+  {
+   "fieldname": "column_break_hyyr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "disp_qty",
+   "fieldtype": "Int",
+   "label": "Dispatched Qty"
+  },
+  {
+   "fieldname": "conv_qty",
+   "fieldtype": "Int",
+   "label": "Converted Qty"
+  },
+  {
+   "fieldname": "rej_qty",
+   "fieldtype": "Int",
+   "label": "Rejected Qty"
+  },
+  {
+   "fieldname": "operation_status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Operation Status"
+  },
+  {
+   "fieldname": "stock_and_status_entry_list_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stock and Status Entry List"
+  },
+  {
+   "fieldname": "dispatch_entry_list_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dispatch Entry List"
+  },
+  {
+   "fieldname": "osd",
+   "fieldtype": "Table",
+   "label": "Operation Status Details",
+   "options": "PWO Process Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Production Work Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "pwo_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "production_log_section",
+   "fieldtype": "Section Break",
+   "label": "Production Log"
+  },
+  {
+   "fieldname": "ssl_entry",
+   "fieldtype": "Table",
+   "label": "SSL Entry",
+   "options": "PWO SSL"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-11 17:35:48.144720",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Production Work Order",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

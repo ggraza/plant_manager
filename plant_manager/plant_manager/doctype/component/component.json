@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:component_code",
+ "creation": "2025-01-03 17:26:21.630381",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "component_code",
+  "uom",
+  "column_break_bnsr",
+  "component_name",
+  "rm_component",
+  "component_stock_status_section",
+  "column_break_wlhq",
+  "fg_qty",
+  "column_break_jeut",
+  "up_qty",
+  "column_break_kjwz",
+  "rm_qty",
+  "operation_table_tab",
+  "vendor_details_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "component_code",
+   "fieldtype": "Data",
+   "label": "Component Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM_"
+  },
+  {
+   "fieldname": "column_break_bnsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "component_name",
+   "fieldtype": "Data",
+   "label": "Component Name"
+  },
+  {
+   "fieldname": "operation_table_tab",
+   "fieldtype": "Tab Break",
+   "label": "Operation table"
+  },
+  {
+   "fieldname": "component_stock_status_section",
+   "fieldtype": "Section Break",
+   "label": "Component Stock Status"
+  },
+  {
+   "description": "in standard UOM",
+   "fieldname": "fg_qty",
+   "fieldtype": "Int",
+   "label": "FG Qty"
+  },
+  {
+   "fieldname": "column_break_jeut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "in standard UOM",
+   "fieldname": "up_qty",
+   "fieldtype": "Int",
+   "label": "Under Process Qty"
+  },
+  {
+   "fieldname": "column_break_kjwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "in Meters / RM UOM",
+   "fieldname": "rm_qty",
+   "fieldtype": "Float",
+   "label": "Raw Material Qty"
+  },
+  {
+   "fieldname": "rm_component",
+   "fieldtype": "Link",
+   "label": "Raw Material Component ",
+   "options": "Component"
+  },
+  {
+   "fieldname": "column_break_wlhq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vendor_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vendor Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-03 18:54:00.709533",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Component",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

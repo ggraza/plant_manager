@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-20 14:25:15.152529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "process_status_section",
+  "sid",
+  "opt",
+  "comp_qty",
+  "column_break_gpaa",
+  "t_qty",
+  "opt_name",
+  "p_qty",
+  "production_status_report_section",
+  "waiting_qty",
+  "column_break_ubzu",
+  "auto_waiting_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "sid",
+   "fieldtype": "Int",
+   "label": "Sequence ID"
+  },
+  {
+   "fieldname": "opt",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Process Operation"
+  },
+  {
+   "fetch_from": "opt.operation_name",
+   "fieldname": "opt_name",
+   "fieldtype": "Data",
+   "label": "Operation Name"
+  },
+  {
+   "fieldname": "process_status_section",
+   "fieldtype": "Section Break",
+   "label": "Process Status"
+  },
+  {
+   "fieldname": "comp_qty",
+   "fieldtype": "Int",
+   "label": "Completed Qty"
+  },
+  {
+   "fieldname": "column_break_gpaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "t_qty",
+   "fieldtype": "Int",
+   "label": "Total Qty"
+  },
+  {
+   "fieldname": "p_qty",
+   "fieldtype": "Int",
+   "label": "Pending Qty"
+  },
+  {
+   "fieldname": "production_status_report_section",
+   "fieldtype": "Section Break",
+   "label": "Production Status Report"
+  },
+  {
+   "fieldname": "waiting_qty",
+   "fieldtype": "Float",
+   "label": "Waiting Qty"
+  },
+  {
+   "fieldname": "column_break_ubzu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_waiting_qty",
+   "fieldtype": "Float",
+   "label": "Auto Waiting Qty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-30 12:12:47.150751",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "PWO Process Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
