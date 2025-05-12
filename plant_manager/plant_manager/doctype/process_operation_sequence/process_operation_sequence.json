@@ -1,12 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{component_name}-{component_code}-{revision}",
  "creation": "2025-02-10 18:30:01.051632",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "component_details_section",
-  "component",
+  "component_code",
+  "revision",
   "column_break_cidk",
   "component_name",
   "operation_sequence_list_section",
@@ -14,17 +16,11 @@
  ],
  "fields": [
   {
-   "fieldname": "component",
-   "fieldtype": "Link",
-   "label": "Component Code",
-   "options": "Component"
-  },
-  {
    "fieldname": "column_break_cidk",
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "component.component_code",
+   "fetch_from": "component_code.component_name",
    "fieldname": "component_name",
    "fieldtype": "Data",
    "label": "Component Name"
@@ -44,14 +40,28 @@
    "fieldtype": "Table",
    "label": "POS ",
    "options": "POS Table"
+  },
+  {
+   "fieldname": "component_code",
+   "fieldtype": "Link",
+   "label": "Component Code",
+   "options": "Component"
+  },
+  {
+   "default": "1",
+   "fieldname": "revision",
+   "fieldtype": "Int",
+   "label": "Revision ",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-02-10 18:38:56.208358",
+ "modified": "2025-02-28 10:58:22.531299",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Process Operation Sequence",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

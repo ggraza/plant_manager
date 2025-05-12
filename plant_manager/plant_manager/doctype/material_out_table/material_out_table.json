@@ -15,10 +15,12 @@
   "batch",
   "qty",
   "t_wh",
-  "for_process"
+  "for_process",
+  "opt_stat"
  ],
  "fields": [
   {
+   "fetch_from": "batch.comp_code",
    "fieldname": "comp_code",
    "fieldtype": "Link",
    "label": "Component code",
@@ -72,16 +74,23 @@
    "read_only": 1
   },
   {
+   "fetch_from": "comp_code.uom",
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "U.O.M",
    "options": "UOM_"
+  },
+  {
+   "fieldname": "opt_stat",
+   "fieldtype": "Link",
+   "label": "Operation Status",
+   "options": "Operation Status"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-08 14:48:56.337528",
+ "modified": "2025-04-18 13:32:23.175665",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material Out Table",

@@ -6,3 +6,17 @@
 
 // 	},
 // });
+
+frappe.ui.form.on("Vendor", {
+    onload: function (frm) {
+      frm.set_query("operation_code", "vendor_process_details", function (doc, cdt, cdn) {
+        let row = locals[cdt][cdn];
+        return {
+          "filters": {
+            "comp_code": row.component_code
+          },
+        };
+      });
+    },
+  });
+ 

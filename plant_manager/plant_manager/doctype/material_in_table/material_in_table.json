@@ -31,7 +31,7 @@
    "fieldname": "batch",
    "fieldtype": "Link",
    "label": "Batch",
-   "options": "Plant Batch"
+   "options": "Production Work Order"
   },
   {
    "fieldname": "f_wh",
@@ -40,7 +40,7 @@
    "options": "Stock Warehouse"
   },
   {
-   "fetch_from": "batch.b_date",
+   "fetch_from": "batch.pwo_date",
    "fieldname": "batch_date",
    "fieldtype": "Date",
    "label": "Batch Date",
@@ -102,7 +102,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-08 14:49:47.502627",
+ "modified": "2025-03-05 13:24:56.949804",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material In Table",

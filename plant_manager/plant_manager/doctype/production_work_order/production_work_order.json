@@ -7,11 +7,11 @@
  "field_order": [
   "details_section",
   "item_details_column",
+  "pos",
   "comp_code",
-  "pwo_qty",
   "column_break_qjui",
+  "pwo_qty",
   "comp_name",
-  "fy",
   "pwo_date",
   "pwo_status_section",
   "pwo_status",
@@ -26,7 +26,10 @@
   "stock_and_status_entry_list_tab",
   "production_log_section",
   "ssl_entry",
+  "warehouse_stock_status_tab",
+  "wss",
   "dispatch_entry_list_tab",
+  "dispatch",
   "amended_from"
  ],
  "fields": [
@@ -44,49 +47,48 @@
    "label": "Component Details"
   },
   {
+   "fetch_from": "pos.component_code",
    "fieldname": "comp_code",
    "fieldtype": "Link",
    "label": "Component Code",
-   "options": "Component"
+   "options": "Component",
+   "read_only": 1
   },
   {
    "fieldname": "pwo_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "P.W.O Quantity"
   },
   {
    "fetch_from": "comp_code.component_name",
-   "fetch_if_empty": 1,
    "fieldname": "comp_name",
    "fieldtype": "Data",
    "label": "Component Name",
    "read_only": 1
   },
   {
-   "fieldname": "fy",
-   "fieldtype": "Link",
-   "label": "Financial Year",
-   "options": "Fiscal Year"
-  },
-  {
+   "allow_on_submit": 1,
    "fieldname": "pwo_status_section",
    "fieldtype": "Section Break",
    "label": "P.W.O Status"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "pwo_status",
    "fieldtype": "Select",
    "label": "PWO Status",
    "options": "Open\nCompleted\nClosed"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "comp_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Completed Qty"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "rwk_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Rework Qty"
   },
   {
@@ -94,18 +96,21 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "disp_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Dispatched Qty"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "conv_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Converted Qty"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "rej_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Rejected Qty"
   },
   {
@@ -124,6 +129,7 @@
    "label": "Dispatch Entry List"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "osd",
    "fieldtype": "Table",
    "label": "Operation Status Details",
@@ -150,16 +156,41 @@
    "label": "Production Log"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "ssl_entry",
    "fieldtype": "Table",
    "label": "SSL Entry",
    "options": "PWO SSL"
+  },
+  {
+   "fieldname": "pos",
+   "fieldtype": "Link",
+   "label": "Process Operation Sequence",
+   "options": "Process Operation Sequence"
+  },
+  {
+   "fieldname": "warehouse_stock_status_tab",
+   "fieldtype": "Tab Break",
+   "label": "Warehouse Stock Status"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "wss",
+   "fieldtype": "Table",
+   "options": "PWO Warehouse Stock"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dispatch",
+   "fieldtype": "Table",
+   "label": "Dispatch",
+   "options": "PWO Dispatch"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-11 17:35:48.144720",
+ "modified": "2025-04-24 12:42:38.997689",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Production Work Order",

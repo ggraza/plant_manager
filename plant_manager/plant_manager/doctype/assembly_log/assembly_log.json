@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-12 12:28:09.663834",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kqxz",
+  "comp_id",
+  "asb_qty",
+  "column_break_thgs",
+  "date_time",
+  "amended_from",
+  "assembly_child_parts_list_section",
+  "acp"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kqxz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assembly Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "comp_id",
+   "fieldtype": "Link",
+   "label": "Component ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "column_break_thgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asb_qty",
+   "fieldtype": "Float",
+   "label": "Assembly Qty"
+  },
+  {
+   "fieldname": "assembly_child_parts_list_section",
+   "fieldtype": "Section Break",
+   "label": "Assembly Child Parts List"
+  },
+  {
+   "fieldname": "acp",
+   "fieldtype": "Table",
+   "label": "Assembly Child Parts ",
+   "options": "Assembly Table"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-12 12:37:30.021543",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Assembly Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

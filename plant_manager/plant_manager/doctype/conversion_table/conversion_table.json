@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-10 13:22:35.623348",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "created_by",
+  "date_time",
+  "conversion_from_section",
+  "batch",
+  "from_component_id",
+  "from_operation_id",
+  "from_warehouse",
+  "fos",
+  "conv_qty",
+  "section_break_fswa",
+  "to_component_id",
+  "to_operation_id",
+  "to_warehouse",
+  "tos"
+ ],
+ "fields": [
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Production Work Order"
+  },
+  {
+   "fieldname": "from_component_id",
+   "fieldtype": "Link",
+   "label": "From Component ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "from_operation_id",
+   "fieldtype": "Link",
+   "label": "From Operation ID",
+   "options": "Process Operation"
+  },
+  {
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "section_break_fswa",
+   "fieldtype": "Section Break",
+   "label": "Conversion To"
+  },
+  {
+   "fieldname": "to_component_id",
+   "fieldtype": "Link",
+   "label": "To Component ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "to_operation_id",
+   "fieldtype": "Link",
+   "label": "To Operation ID",
+   "options": "Process Operation"
+  },
+  {
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "fos",
+   "fieldtype": "Link",
+   "label": "From Operation Status",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "tos",
+   "fieldtype": "Link",
+   "label": "To Operation Status ",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "conv_qty",
+   "fieldtype": "Float",
+   "label": "Conversion Qty"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created by"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "conversion_from_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion From"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-10 14:03:05.644608",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Conversion Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

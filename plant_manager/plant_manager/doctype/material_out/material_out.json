@@ -1,5 +1,11 @@
 {
- "actions": [],
+ "actions": [
+  {
+   "action": "plant_manager.plant_manager.doctype.material_out.material_out.delete_ssl_entry",
+   "action_type": "Server Action",
+   "label": "Delete Links"
+  }
+ ],
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-01-22 16:04:10.769781",
@@ -59,7 +65,8 @@
    "fetch_from": "vdr.vendor_code",
    "fieldname": "vdr_code",
    "fieldtype": "Data",
-   "label": "Vendor Code"
+   "label": "Vendor Code",
+   "read_only": 1
   },
   {
    "fieldname": "status_tab",
@@ -72,8 +79,9 @@
    "label": "Naming Series"
   },
   {
+   "default": "Today",
    "fieldname": "p_date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Posting Date"
   },
   {
@@ -119,6 +127,7 @@
    "label": "Material In Note Table"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "total_received_qty",
    "fieldtype": "Float",
    "label": "Total Received Qty"
@@ -127,7 +136,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-22 20:05:08.815810",
+ "modified": "2025-05-10 12:48:53.460556",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material Out",

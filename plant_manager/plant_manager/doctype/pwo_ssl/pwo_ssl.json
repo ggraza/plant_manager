@@ -8,18 +8,28 @@
  "field_order": [
   "date",
   "process_id",
+  "operation_type",
   "column_break_vdgb",
-  "material_in",
   "process_name",
-  "qty"
+  "qty",
+  "section_break_vcyl",
+  "transaction_type",
+  "transaction_id",
+  "operation_status",
+  "warehouse_details_section",
+  "from_warehouse",
+  "column_break_tzda",
+  "to_warehouse"
  ],
  "fields": [
   {
+   "allow_on_submit": 1,
    "fieldname": "date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Date"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "process_id",
    "fieldtype": "Link",
    "label": "Process ID",
@@ -30,26 +40,81 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
+   "fetch_from": "process_id.operation_name",
    "fieldname": "process_name",
    "fieldtype": "Data",
    "label": "Process Name"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "qty",
    "fieldtype": "Float",
    "label": "Qty"
   },
   {
-   "fieldname": "material_in",
+   "allow_on_submit": 1,
+   "fetch_from": "process_id.operation_type",
+   "fieldname": "operation_type",
    "fieldtype": "Link",
-   "label": "Material In",
-   "options": "Material In"
+   "label": "Operation Type",
+   "options": "Process Operation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vcyl",
+   "fieldtype": "Section Break",
+   "label": "Transaction Document Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "transaction_type",
+   "fieldtype": "Link",
+   "label": "Transaction Type",
+   "options": "DocType"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Transaction ID"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "operation_status",
+   "fieldtype": "Link",
+   "label": "Operation Status",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "warehouse_details_section",
+   "fieldtype": "Section Break",
+   "label": "Warehouse Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "column_break_tzda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-08 15:02:48.804986",
+ "modified": "2025-05-10 12:51:15.899410",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "PWO SSL",

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{comp_code}-{operation_code}",
+ "autoname": "format:{operation_code}",
  "creation": "2025-01-03 19:25:51.032709",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +9,7 @@
   "title_section",
   "title",
   "column_break_jsys",
+  "operation_type",
   "is_manual_operation",
   "details_section",
   "operation_code",
@@ -27,7 +28,6 @@
    "label": "Title"
   },
   {
-   "default": "{operation_name}-{comp_name}",
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Title"
@@ -64,8 +64,11 @@
    "fetch_from": "comp_code.component_name",
    "fieldname": "comp_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Component Name",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "description_section",
@@ -92,11 +95,17 @@
    "fieldname": "is_manual_operation",
    "fieldtype": "Check",
    "label": "is manual operation?"
+  },
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Link",
+   "label": "Operation Type",
+   "options": "Process Operation Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-25 13:03:16.351520",
+ "modified": "2025-04-10 11:30:59.031722",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Process Operation",
@@ -116,7 +125,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "title"
 }

@@ -31,14 +31,18 @@
   {
    "fieldname": "component_code",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Component Code",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "UOM",
-   "options": "UOM_"
+   "options": "UOM_",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_bnsr",
@@ -47,7 +51,9 @@
   {
    "fieldname": "component_name",
    "fieldtype": "Data",
-   "label": "Component Name"
+   "in_list_view": 1,
+   "label": "Component Name",
+   "reqd": 1
   },
   {
    "fieldname": "operation_table_tab",
@@ -62,7 +68,7 @@
   {
    "description": "in standard UOM",
    "fieldname": "fg_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "FG Qty"
   },
   {
@@ -72,7 +78,7 @@
   {
    "description": "in standard UOM",
    "fieldname": "up_qty",
-   "fieldtype": "Int",
+   "fieldtype": "Float",
    "label": "Under Process Qty"
   },
   {
@@ -103,7 +109,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-03 18:54:00.709533",
+ "modified": "2025-04-10 11:21:25.956978",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Component",
@@ -123,7 +129,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "component_name"
 }

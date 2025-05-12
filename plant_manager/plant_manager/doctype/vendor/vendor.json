@@ -11,7 +11,9 @@
   "vendor_code",
   "column_break_jhyb",
   "disable",
-  "component_details_tab"
+  "component_details_tab",
+  "service_list_section",
+  "vendor_process_details"
  ],
  "fields": [
   {
@@ -44,11 +46,22 @@
    "fieldname": "vendor_code",
    "fieldtype": "Data",
    "label": "Vendor Code"
+  },
+  {
+   "fieldname": "service_list_section",
+   "fieldtype": "Section Break",
+   "label": "Service List"
+  },
+  {
+   "fieldname": "vendor_process_details",
+   "fieldtype": "Table",
+   "label": "Vendor Process Details",
+   "options": "Vendor Component Details"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-22 16:06:37.979367",
+ "modified": "2025-03-06 18:53:18.586487",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Vendor",

@@ -1,0 +1,293 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"vIrxGwv_ox\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Plant Manager</span>\",\"col\":12}},{\"id\":\"p5qaVGPRgk\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic\",\"col\":4}},{\"id\":\"Kf-DBVkZU3\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Resource Entries\",\"col\":4}},{\"id\":\"BdVHblsO2-\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Processing Data \",\"col\":4}},{\"id\":\"7qAiK99SMs\",\"type\":\"card\",\"data\":{\"card_name\":\"Tracker Entries\",\"col\":4}},{\"id\":\"Nnnf4RWUh6\",\"type\":\"card\",\"data\":{\"card_name\":\"Material Movement Entries\",\"col\":4}},{\"id\":\"unB9ePYedQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Component Quality Entries\",\"col\":4}},{\"id\":\"OAtJCNsl9s\",\"type\":\"card\",\"data\":{\"card_name\":\"Production Entries\",\"col\":4}}]",
+ "creation": "2025-02-27 17:49:22.407887",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "arrow-up-right",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Plant Manager",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Basic",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Component",
+   "link_count": 0,
+   "link_to": "Component",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UOM_",
+   "link_count": 0,
+   "link_to": "UOM_",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Basic Resource Entries",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Warehouse",
+   "link_count": 0,
+   "link_to": "Stock Warehouse",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warehouse Type",
+   "link_count": 0,
+   "link_to": "Warehouse Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Machine and Equipment List",
+   "link_count": 0,
+   "link_to": "Machine and Equipment List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Work Force",
+   "link_count": 0,
+   "link_to": "Work Force",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendor",
+   "link_count": 0,
+   "link_to": "Vendor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Basic Processing Data ",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process Operation",
+   "link_count": 0,
+   "link_to": "Process Operation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process Operation Sequence",
+   "link_count": 0,
+   "link_to": "Process Operation Sequence",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Process Operation Type",
+   "link_count": 0,
+   "link_to": "Process Operation Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Operation Status",
+   "link_count": 0,
+   "link_to": "Operation Status",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Movement Entries",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Out",
+   "link_count": 0,
+   "link_to": "Material Out",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material In",
+   "link_count": 0,
+   "link_to": "Material In",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Component Quality Entries",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rejection Log",
+   "link_count": 0,
+   "link_to": "Rejection Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rework Log",
+   "link_count": 0,
+   "link_to": "Rework Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tracker Entries",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "RM Batch",
+   "link_count": 0,
+   "link_to": "RM Batch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production Work Order",
+   "link_count": 0,
+   "link_to": "Production Work Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production Entries",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "In-House Production",
+   "link_count": 0,
+   "link_to": "In-House Production",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assembly Log",
+   "link_count": 0,
+   "link_to": "Assembly Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Conversion Log",
+   "link_count": 0,
+   "link_to": "Conversion Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-05-12 12:28:58.097298",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Plant Manager",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "Plant Manager"
+}

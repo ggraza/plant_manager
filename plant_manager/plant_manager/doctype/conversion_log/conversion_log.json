@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-10 15:01:56.942234",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ufsa",
+  "created_by",
+  "batch",
+  "column_break_pbdb",
+  "date_time",
+  "amended_from",
+  "section_break_mvvm",
+  "from_column",
+  "from_component_id",
+  "from_operation_id",
+  "from_warehouse",
+  "fos",
+  "column_break_ytyt",
+  "to_component_id",
+  "to_operation_id",
+  "to_warehouse",
+  "tos"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ufsa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Conversion Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created by"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "section_break_mvvm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Production Work Order"
+  },
+  {
+   "fieldname": "from_component_id",
+   "fieldtype": "Link",
+   "label": "From Component ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "from_operation_id",
+   "fieldtype": "Link",
+   "label": "From Operation ID",
+   "options": "Process Operation"
+  },
+  {
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "fos",
+   "fieldtype": "Link",
+   "label": "From Operation Status",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "to_component_id",
+   "fieldtype": "Link",
+   "label": "To Component ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "to_operation_id",
+   "fieldtype": "Link",
+   "label": "To Operation ID",
+   "options": "Process Operation"
+  },
+  {
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "tos",
+   "fieldtype": "Link",
+   "label": "To Operation Status ",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "column_break_pbdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ytyt",
+   "fieldtype": "Column Break",
+   "label": "To"
+  },
+  {
+   "fieldname": "from_column",
+   "fieldtype": "Column Break",
+   "label": "From"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-10 16:07:25.796979",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Conversion Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

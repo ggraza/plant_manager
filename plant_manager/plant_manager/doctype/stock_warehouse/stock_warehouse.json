@@ -1,11 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{warehouse_name}",
  "creation": "2025-01-22 17:07:53.977612",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "ven",
+  "warehouse_type",
   "column_break_mkct",
   "warehouse_name"
  ],
@@ -25,14 +27,21 @@
    "fieldtype": "Link",
    "label": "Vendor",
    "options": "Vendor"
+  },
+  {
+   "fieldname": "warehouse_type",
+   "fieldtype": "Link",
+   "label": "Warehouse Type",
+   "options": "Warehouse Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-22 17:11:31.886019",
+ "modified": "2025-05-09 16:09:00.359385",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Stock Warehouse",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

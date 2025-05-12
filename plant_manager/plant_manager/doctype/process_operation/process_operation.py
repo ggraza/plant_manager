@@ -6,4 +6,7 @@ from frappe.model.document import Document
 
 
 class ProcessOperation(Document):
-	pass
+
+	def validate(self):
+		self.title= " "
+		self.title= ' '.join(filter(None, [self.comp_name, self.operation_name]))

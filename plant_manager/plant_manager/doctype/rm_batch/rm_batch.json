@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-10 18:47:11.278920",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mkjk",
+  "rm_id",
+  "atr_no",
+  "amended_from",
+  "column_break_aqsz",
+  "date_time",
+  "rm_qty",
+  "p_qty",
+  "list_of_cut_rm_batch_wise_section",
+  "rm_consumtion"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mkjk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "RM Batch",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rm_id",
+   "fieldtype": "Link",
+   "label": "Raw Material ID",
+   "options": "Component"
+  },
+  {
+   "fieldname": "atr_no",
+   "fieldtype": "Data",
+   "label": "ATR No"
+  },
+  {
+   "fieldname": "column_break_aqsz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "rm_qty",
+   "fieldtype": "Float",
+   "label": "RM Qty in mts"
+  },
+  {
+   "fieldname": "list_of_cut_rm_batch_wise_section",
+   "fieldtype": "Section Break",
+   "label": "List of cut RM batch wise"
+  },
+  {
+   "fieldname": "rm_consumtion",
+   "fieldtype": "Table",
+   "label": "RM Consumtion",
+   "options": "RM Batch Table"
+  },
+  {
+   "fieldname": "p_qty",
+   "fieldtype": "Float",
+   "label": "Pending Qty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-10 18:58:17.287003",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "RM Batch",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
