@@ -8,10 +8,16 @@
  "field_order": [
   "details_section",
   "component_code",
+  "is_rm",
   "uom",
+  "hsn_sac_code",
+  "dos",
   "column_break_bnsr",
   "component_name",
   "rm_component",
+  "rm_type",
+  "cl_mm",
+  "blade_mm",
   "component_stock_status_section",
   "column_break_wlhq",
   "fg_qty",
@@ -95,7 +101,9 @@
    "fieldname": "rm_component",
    "fieldtype": "Link",
    "label": "Raw Material Component ",
-   "options": "Component"
+   "mandatory_depends_on": "eval:doc.is_rm==0;",
+   "options": "Component",
+   "read_only_depends_on": "eval:doc.is_rm==1;"
   },
   {
    "fieldname": "column_break_wlhq",
@@ -105,11 +113,47 @@
    "fieldname": "vendor_details_tab",
    "fieldtype": "Tab Break",
    "label": "Vendor Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rm",
+   "fieldtype": "Check",
+   "label": "is the component Raw Material ?"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "rm_type",
+   "fieldtype": "Select",
+   "label": "RM type",
+   "mandatory_depends_on": "eval:doc.is_rm==1;",
+   "options": "\nMulti cut-RM\nSingle-RM",
+   "read_only_depends_on": "eval:doc.is_rm==0;"
+  },
+  {
+   "fieldname": "dos",
+   "fieldtype": "Link",
+   "label": "Default Operation Sequence",
+   "options": "Process Operation Sequence"
+  },
+  {
+   "fieldname": "hsn_sac_code",
+   "fieldtype": "Data",
+   "label": "HSN/SAC Code"
+  },
+  {
+   "fieldname": "cl_mm",
+   "fieldtype": "Float",
+   "label": "Cutting Length (in mm)"
+  },
+  {
+   "fieldname": "blade_mm",
+   "fieldtype": "Float",
+   "label": "Blade wastage (in mm)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-10 11:21:25.956978",
+ "modified": "2025-06-24 15:43:48.764366",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Component",

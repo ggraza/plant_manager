@@ -9,24 +9,32 @@
   "date",
   "process_id",
   "operation_type",
+  "start_date",
   "column_break_vdgb",
   "process_name",
   "qty",
+  "duration",
+  "dur_min",
   "section_break_vcyl",
   "transaction_type",
-  "transaction_id",
   "operation_status",
+  "column_break_vhtm",
+  "transaction_id",
   "warehouse_details_section",
   "from_warehouse",
   "column_break_tzda",
-  "to_warehouse"
+  "to_warehouse",
+  "durations_section",
+  "s_dur",
+  "column_break_dgel",
+  "p_dur"
  ],
  "fields": [
   {
    "allow_on_submit": 1,
    "fieldname": "date",
    "fieldtype": "Datetime",
-   "label": "Date"
+   "label": "Date Of Completion"
   },
   {
    "allow_on_submit": 1,
@@ -109,12 +117,50 @@
    "fieldtype": "Link",
    "label": "To Warehouse",
    "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "dur_min",
+   "fieldtype": "Float",
+   "label": "Duration in min"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Date of Start"
+  },
+  {
+   "fieldname": "column_break_vhtm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "durations_section",
+   "fieldtype": "Section Break",
+   "label": "Durations"
+  },
+  {
+   "fieldname": "s_dur",
+   "fieldtype": "Float",
+   "label": "Setting Duration in min"
+  },
+  {
+   "fieldname": "column_break_dgel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "p_dur",
+   "fieldtype": "Float",
+   "label": "Production Duration in min"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-10 12:51:15.899410",
+ "modified": "2025-06-07 14:25:22.397988",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "PWO SSL",

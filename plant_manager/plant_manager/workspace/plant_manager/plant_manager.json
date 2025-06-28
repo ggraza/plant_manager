@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"vIrxGwv_ox\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Plant Manager</span>\",\"col\":12}},{\"id\":\"p5qaVGPRgk\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic\",\"col\":4}},{\"id\":\"Kf-DBVkZU3\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Resource Entries\",\"col\":4}},{\"id\":\"BdVHblsO2-\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Processing Data \",\"col\":4}},{\"id\":\"7qAiK99SMs\",\"type\":\"card\",\"data\":{\"card_name\":\"Tracker Entries\",\"col\":4}},{\"id\":\"Nnnf4RWUh6\",\"type\":\"card\",\"data\":{\"card_name\":\"Material Movement Entries\",\"col\":4}},{\"id\":\"unB9ePYedQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Component Quality Entries\",\"col\":4}},{\"id\":\"OAtJCNsl9s\",\"type\":\"card\",\"data\":{\"card_name\":\"Production Entries\",\"col\":4}}]",
+ "content": "[{\"id\":\"vIrxGwv_ox\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Plant Manager</span>\",\"col\":12}},{\"id\":\"p5qaVGPRgk\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic\",\"col\":4}},{\"id\":\"Kf-DBVkZU3\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Resource Entries\",\"col\":4}},{\"id\":\"BdVHblsO2-\",\"type\":\"card\",\"data\":{\"card_name\":\"Basic Processing Data \",\"col\":4}},{\"id\":\"7qAiK99SMs\",\"type\":\"card\",\"data\":{\"card_name\":\"Tracker Entries\",\"col\":4}},{\"id\":\"Nnnf4RWUh6\",\"type\":\"card\",\"data\":{\"card_name\":\"Material Movement Entries\",\"col\":4}},{\"id\":\"unB9ePYedQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Component Quality Entries\",\"col\":4}},{\"id\":\"OAtJCNsl9s\",\"type\":\"card\",\"data\":{\"card_name\":\"Production Entries\",\"col\":4}},{\"id\":\"EK38RY3eKd\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"LJPsU9c7Lx\",\"type\":\"card\",\"data\":{\"card_name\":\"Orders & Invoices\",\"col\":4}}]",
  "creation": "2025-02-27 17:49:22.407887",
  "custom_blocks": [],
  "docstatus": 0,
@@ -275,9 +275,67 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master Settings",
+   "link_count": 0,
+   "link_to": "Master Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Orders & Invoices",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-05-12 12:28:58.097298",
+ "modified": "2025-06-11 11:53:11.351518",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Plant Manager",

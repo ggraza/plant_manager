@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-29 10:59:16.065449",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "r_date_time",
+  "comp_code",
+  "material_in",
+  "received_qty"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "r_date_time",
+   "fieldtype": "Datetime",
+   "label": "Receiving Date Time"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "material_in",
+   "fieldtype": "Data",
+   "label": "Material In "
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "received_qty",
+   "fieldtype": "Float",
+   "label": "Received Qty"
+  },
+  {
+   "fieldname": "comp_code",
+   "fieldtype": "Link",
+   "label": "Component Code",
+   "options": "Component"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-29 13:26:43.081766",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Material Out Receipt Note",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -2,22 +2,26 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2025-01-23 19:38:39.897505",
+ "creation": "2025-06-24 18:06:06.338112",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "supplier_info_section",
-  "naming_series",
-  "vdr",
-  "column_break_fghg",
-  "p_date",
-  "vdr_code",
   "default_stock_warehouse_section",
+  "naming_series",
   "d_from_warehouse",
   "column_break_ynvv",
+  "p_date",
   "d_to_warehouse",
-  "component_table_section",
+  "supplier_info_section",
+  "vdr",
+  "column_break_fghg",
+  "vdr_code",
+  "section_break_skco",
   "component_table",
+  "rm_tab",
+  "rm_table",
+  "asset_tab",
+  "asset",
   "status_tab",
   "section_break_qtb3",
   "amended_from"
@@ -34,16 +38,19 @@
    "label": "Naming Series"
   },
   {
+   "fetch_from": "d_from_warehouse.ven",
    "fieldname": "vdr",
    "fieldtype": "Link",
    "label": "Vendor",
-   "options": "Vendor"
+   "options": "Vendor",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_fghg",
    "fieldtype": "Column Break"
   },
   {
+   "default": "now",
    "fieldname": "p_date",
    "fieldtype": "Datetime",
    "label": "Posting Date"
@@ -52,7 +59,8 @@
    "fetch_from": "vdr.vendor_code",
    "fieldname": "vdr_code",
    "fieldtype": "Data",
-   "label": "Vendor Code"
+   "label": "Vendor Code",
+   "read_only": 1
   },
   {
    "fieldname": "default_stock_warehouse_section",
@@ -76,15 +84,26 @@
    "options": "Stock Warehouse"
   },
   {
-   "fieldname": "component_table_section",
-   "fieldtype": "Section Break",
-   "label": "Component Table"
+   "fieldname": "rm_table",
+   "fieldtype": "Table",
+   "label": "RM table",
+   "options": "Material In RM"
   },
   {
-   "fieldname": "component_table",
+   "fieldname": "asset",
    "fieldtype": "Table",
-   "label": "Component Table",
-   "options": "Material In Table"
+   "label": "Asset",
+   "options": "Material In Asset"
+  },
+  {
+   "fieldname": "rm_tab",
+   "fieldtype": "Tab Break",
+   "label": "RM"
+  },
+  {
+   "fieldname": "asset_tab",
+   "fieldtype": "Tab Break",
+   "label": "Asset"
   },
   {
    "fieldname": "status_tab",
@@ -106,20 +125,20 @@
    "search_index": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Material In",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
+   "fieldname": "section_break_skco",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "component_table",
+   "fieldtype": "Table",
+   "label": "Component Table",
+   "options": "Material In Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-10 12:49:37.747285",
+ "modified": "2025-06-28 15:58:48.576967",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material In",
@@ -127,6 +146,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -135,6 +156,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "submit": 1,
    "write": 1

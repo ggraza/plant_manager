@@ -1,11 +1,5 @@
 {
- "actions": [
-  {
-   "action": "plant_manager.plant_manager.doctype.material_out.material_out.delete_ssl_entry",
-   "action_type": "Server Action",
-   "label": "Delete Links"
-  }
- ],
+ "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2025-01-22 16:04:10.769781",
@@ -18,15 +12,19 @@
   "column_break_fghg",
   "p_date",
   "vdr_code",
+  "mot",
   "default_stock_warehouse_section",
   "d_from_warehouse",
   "column_break_ynvv",
   "d_to_warehouse",
   "component_table_section",
+  "rm_table",
   "component_table",
+  "asset_table",
   "material_returned_note_tab",
   "material_in_note_table_section",
   "total_received_qty",
+  "mrn",
   "status_tab",
   "section_break_qtb3",
   "amended_from"
@@ -111,9 +109,11 @@
    "label": "Component Table"
   },
   {
+   "depends_on": "eval:doc.mot == \"Process Component\"||doc.mot == \"Asset and Process Component\";",
    "fieldname": "component_table",
    "fieldtype": "Table",
    "label": "Component Table",
+   "mandatory_depends_on": "eval: doc.mot == \"Process Component\" || doc.mot == \"Asset and Process Component\";",
    "options": "Material Out Table"
   },
   {
@@ -131,12 +131,42 @@
    "fieldname": "total_received_qty",
    "fieldtype": "Float",
    "label": "Total Received Qty"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "mrn",
+   "fieldtype": "Table",
+   "label": "Material Return Note",
+   "options": "Material Out Receipt Note"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "mot",
+   "fieldtype": "Select",
+   "label": "Material Out Type",
+   "options": "\nRM\nProcess Component\nAsset\nAsset and Process Component"
+  },
+  {
+   "depends_on": "eval: doc.mot == \"RM\"",
+   "fieldname": "rm_table",
+   "fieldtype": "Table",
+   "label": "RM Table",
+   "mandatory_depends_on": "eval: doc.mot == \"RM\"",
+   "options": "Material Out RM"
+  },
+  {
+   "depends_on": "eval:doc.mot == \"Asset\" || doc.mot == \"Asset and Process Component\";",
+   "fieldname": "asset_table",
+   "fieldtype": "Table",
+   "label": "Asset Table",
+   "mandatory_depends_on": "eval: doc.mot == \"Asset\" || doc.mot == \"Asset and Process Component\";",
+   "options": "Material Out Asset"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-10 12:48:53.460556",
+ "modified": "2025-06-16 15:10:03.549079",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material Out",
@@ -144,6 +174,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -157,7 +188,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "vdr"
 }

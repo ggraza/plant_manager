@@ -45,10 +45,3 @@ frappe.ui.form.on("Production Work Order", {
 	},
  }
 );
-
-// frappe.ui.form.on("Production Work Order", { 
-//     onload: function(frm) {
-//         console.log("ingnoring");
-//         frm.ignore_doctype_on_cancel_all=["Production Work Order", "Material Out"];
-//     }
-// });

@@ -11,12 +11,17 @@
   "f_wh",
   "batch_date",
   "uom",
+  "weight_per_unit",
+  "cost_per_unit",
   "column_break_yapn",
   "batch",
   "qty",
   "t_wh",
   "for_process",
-  "opt_stat"
+  "opt_stat",
+  "pending_qty",
+  "total_cost",
+  "hsn_sac_code"
  ],
  "fields": [
   {
@@ -33,6 +38,7 @@
    "options": "Production Work Order"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "f_wh",
    "fieldtype": "Link",
    "label": "From Warehouse",
@@ -55,6 +61,7 @@
    "label": "Qty"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "t_wh",
    "fieldtype": "Link",
    "label": "To Warehouse",
@@ -85,12 +92,40 @@
    "fieldtype": "Link",
    "label": "Operation Status",
    "options": "Operation Status"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pending_qty",
+   "fieldtype": "Float",
+   "label": "Pending Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_per_unit",
+   "fieldtype": "Float",
+   "label": "Weight per Unit"
+  },
+  {
+   "fieldname": "cost_per_unit",
+   "fieldtype": "Float",
+   "label": "Cost per Unit"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total Cost"
+  },
+  {
+   "fetch_from": "comp_code.hsn_sac_code",
+   "fieldname": "hsn_sac_code",
+   "fieldtype": "Data",
+   "label": "HSN/SAC Code"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-18 13:32:23.175665",
+ "modified": "2025-06-14 18:13:08.056866",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material Out Table",

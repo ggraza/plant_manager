@@ -3,6 +3,7 @@
 
 frappe.ui.form.on("Material Out", {
     refresh: function(frm) {
+
         frm.add_custom_button(__("Production Work Order"),()=>{
             if(frm.doc.vdr) {
                 //frm.clear_table('component_table');
@@ -136,9 +137,27 @@ frappe.ui.form.on("Material Out", {
     },   
 });
 
-// frappe.ui.form.on("Material Out", { 
-//     onload: function(frm) {
-//         console.log("ingnoring");
-//         frm.ignore_doctype_on_cancel_all=["Production Work Order", "Material Out"];
-//     }
-// });
+frappe.ui.form.on('Material Out Table', {
+    qty: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        if(d.qty){
+            frappe.model.set_value(cdt, cdn, 'pending_qty', d.qty);
+        }
+    }
+});
+frappe.ui.form.on('Material Out Asset', {
+    qty: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        if(d.qty){
+            frappe.model.set_value(cdt, cdn, 'pending_qty', d.qty);
+        }
+    }
+});
+frappe.ui.form.on('Material Out RM', {
+    qty: function (frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        if(d.qty){
+            frappe.model.set_value(cdt, cdn, 'pending_qty', d.qty);
+        }
+    }
+});

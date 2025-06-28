@@ -21,8 +21,34 @@ class MaterialOut(Document):
 
 	# def before_cancel(self):
 	# 	self.delete_ssl_entry()
+	@frappe.whitelist()		
+	def update_pending_qty(self):
+		for a in self.get("component_table"):
+			a_qty = 0
+			for b in self.get("mrn"):
+				if a.comp_code == b.comp_code:
+					a_qty = a_qty + b.received_qty
+				
+			a.pending_qty = a.qty - a_qty
 
+		for i in self.get("rm_table"):
+			i_qty = 0
+			for b in self.get("mrn"):
+				if i.component_code == b.comp_code:
+					i_qty = i_qty + b.received_qty
+				
+			i.pending_qty = i.qty - i_qty
 
+		for j in self.get("rm_table"):
+			j_qty = 0
+			for b in self.get("mrn"):
+				if j.component_code == b.comp_code:
+					j_qty = j_qty + b.received_qty
+				
+			j.pending_qty = j.qty - j_qty
+		
+		self.save(ignore_permissions=True)
+		
 		
 	@frappe.whitelist()
 	def create_ssl_entry(self):

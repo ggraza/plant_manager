@@ -9,6 +9,7 @@
   "item_details_column",
   "pos",
   "comp_code",
+  "created_against",
   "column_break_qjui",
   "pwo_qty",
   "comp_name",
@@ -81,12 +82,14 @@
   },
   {
    "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "comp_qty",
    "fieldtype": "Float",
    "label": "Completed Qty"
   },
   {
    "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "rwk_qty",
    "fieldtype": "Float",
    "label": "Rework Qty"
@@ -97,18 +100,21 @@
   },
   {
    "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "disp_qty",
    "fieldtype": "Float",
    "label": "Dispatched Qty"
   },
   {
    "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "conv_qty",
    "fieldtype": "Float",
    "label": "Converted Qty"
   },
   {
    "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "rej_qty",
    "fieldtype": "Float",
    "label": "Rejected Qty"
@@ -185,12 +191,17 @@
    "fieldtype": "Table",
    "label": "Dispatch",
    "options": "PWO Dispatch"
+  },
+  {
+   "fieldname": "created_against",
+   "fieldtype": "Data",
+   "label": "Created Against"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-24 12:42:38.997689",
+ "modified": "2025-06-14 11:44:11.428302",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Production Work Order",

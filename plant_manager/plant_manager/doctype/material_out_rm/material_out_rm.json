@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-14 13:58:32.698915",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "component_code",
+  "uom",
+  "cost_per_uom",
+  "fg_component",
+  "from_warehouse",
+  "total_cost",
+  "column_break_qycw",
+  "hsn_sac_code",
+  "rm_batch",
+  "qty",
+  "cutting_length_in_mm",
+  "to_warehouse",
+  "pending_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "component_code",
+   "fieldtype": "Link",
+   "label": "Component Code",
+   "options": "Component"
+  },
+  {
+   "fieldname": "cost_per_uom",
+   "fieldtype": "Float",
+   "label": "Cost per UOM"
+  },
+  {
+   "fieldname": "fg_component",
+   "fieldtype": "Link",
+   "label": "FG Component",
+   "options": "Component"
+  },
+  {
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total cost"
+  },
+  {
+   "fieldname": "column_break_qycw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rm_batch",
+   "fieldtype": "Link",
+   "label": "RM Batch",
+   "options": "RM Batch"
+  },
+  {
+   "fieldname": "cutting_length_in_mm",
+   "fieldtype": "Float",
+   "label": "Cutting Length in mm"
+  },
+  {
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fetch_from": "component_code.hsn_sac_code",
+   "fieldname": "hsn_sac_code",
+   "fieldtype": "Data",
+   "label": "HSN/SAC Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pending_qty",
+   "fieldtype": "Float",
+   "label": "Pending Qty in UOM"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM_"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty in mts"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-16 12:58:03.193222",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Material Out RM",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

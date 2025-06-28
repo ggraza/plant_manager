@@ -7,49 +7,59 @@
  "engine": "InnoDB",
  "field_order": [
   "mac",
+  "item_code",
+  "item_name",
+  "operation_id",
+  "no_setting",
   "s_starttime",
   "s_endtime",
   "p_starttime",
   "p_endtime",
-  "item_code",
-  "item_name",
-  "operation_id",
-  "comment",
   "column_break1",
-  "s_time",
-  "c_time",
   "batch_number",
   "bq",
   "a_qty",
+  "c_time",
   "f_qty",
   "t_qty",
   "p_qty",
-  "acc_qty",
+  "is_rework_operation",
   "rew_qty",
-  "rej_qty"
+  "acc_qty",
+  "rej_qty",
+  "section_break_tpst",
+  "s_time",
+  "c_time_min",
+  "column_break_bobh",
+  "loading_unloading_time",
+  "dur_min",
+  "section_break_vzxe",
+  "comment"
  ],
  "fields": [
   {
    "fieldname": "s_starttime",
    "fieldtype": "Datetime",
-   "label": "Setting Start Time"
+   "label": "Setting Start Time",
+   "mandatory_depends_on": "eval:doc.no_setting==0;",
+   "read_only_depends_on": "eval:doc.no_setting==1;"
   },
   {
    "fieldname": "s_endtime",
    "fieldtype": "Datetime",
-   "label": "Setting End Time"
+   "label": "Setting End Time",
+   "mandatory_depends_on": "eval:doc.no_setting==0;",
+   "read_only_depends_on": "eval:doc.no_setting==1;"
   },
   {
    "fieldname": "p_starttime",
    "fieldtype": "Datetime",
-   "label": "Production Start Time",
-   "reqd": 1
+   "label": "Production Start Time"
   },
   {
    "fieldname": "p_endtime",
    "fieldtype": "Datetime",
-   "label": "Production End Time",
-   "reqd": 1
+   "label": "Production End Time"
   },
   {
    "fieldname": "item_code",
@@ -57,8 +67,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Item_code",
-   "options": "Component",
-   "reqd": 1
+   "options": "Component"
   },
   {
    "fetch_from": "item_code.component_name",
@@ -67,8 +76,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Item Name",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "comment",
@@ -81,14 +89,14 @@
   },
   {
    "fieldname": "s_time",
-   "fieldtype": "Duration",
-   "label": "Setting Time"
+   "fieldtype": "Float",
+   "label": "Total Setting Time in min",
+   "read_only": 1
   },
   {
    "fieldname": "c_time",
    "fieldtype": "Duration",
-   "label": "Cycle Time",
-   "reqd": 1
+   "label": "Cycle Time"
   },
   {
    "allow_on_submit": 1,
@@ -101,20 +109,17 @@
   {
    "fieldname": "a_qty",
    "fieldtype": "Int",
-   "label": "Allocated Quantity",
-   "reqd": 1
+   "label": "Allocated Quantity"
   },
   {
    "fieldname": "f_qty",
    "fieldtype": "Int",
-   "label": "From Qty",
-   "reqd": 1
+   "label": "From Qty"
   },
   {
    "fieldname": "t_qty",
    "fieldtype": "Int",
-   "label": "To Qty",
-   "reqd": 1
+   "label": "To Qty"
   },
   {
    "fieldname": "p_qty",
@@ -127,18 +132,21 @@
   {
    "fieldname": "acc_qty",
    "fieldtype": "Int",
-   "label": "Accepted Qty",
-   "reqd": 1
+   "label": "Accepted Qty"
   },
   {
+   "description": "Mention only if rework operations are done",
    "fieldname": "rew_qty",
    "fieldtype": "Int",
-   "label": "Rework Qty"
+   "label": "Rework Qty",
+   "mandatory_depends_on": "eval:doc.is_rework_operation==1;",
+   "read_only_depends_on": "eval:doc.is_rework_operation==0;"
   },
   {
    "fieldname": "rej_qty",
    "fieldtype": "Int",
-   "label": "Rejected Qty"
+   "label": "Rejected Qty",
+   "read_only": 1
   },
   {
    "fieldname": "mac",
@@ -146,15 +154,13 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Machine ID",
-   "options": "Machine and Equipment List",
-   "reqd": 1
+   "options": "Machine and Equipment List"
   },
   {
    "fieldname": "operation_id",
    "fieldtype": "Link",
    "label": "Operation Name",
-   "options": "Process Operation",
-   "reqd": 1
+   "options": "Process Operation"
   },
   {
    "allow_on_submit": 1,
@@ -162,12 +168,54 @@
    "fieldtype": "Link",
    "label": "Batch Number",
    "options": "Production Work Order"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rework_operation",
+   "fieldtype": "Check",
+   "label": "is rework operation?"
+  },
+  {
+   "fieldname": "section_break_tpst",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bobh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loading_unloading_time",
+   "fieldtype": "Float",
+   "label": "Loading Unloading Time in min",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dur_min",
+   "fieldtype": "Float",
+   "label": "Total Duration in min",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_setting",
+   "fieldtype": "Check",
+   "label": "No setting"
+  },
+  {
+   "fieldname": "c_time_min",
+   "fieldtype": "Float",
+   "label": "Cycle Time in min",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vzxe",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-04-16 13:54:48.633178",
+ "modified": "2025-06-10 13:02:25.747604",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Production Log Table",

@@ -8,9 +8,8 @@
   "section_break_mkjk",
   "rm_id",
   "atr_no",
-  "amended_from",
   "column_break_aqsz",
-  "date_time",
+  "date",
   "rm_qty",
   "p_qty",
   "list_of_cut_rm_batch_wise_section",
@@ -20,16 +19,6 @@
   {
    "fieldname": "section_break_mkjk",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "RM Batch",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   },
   {
    "fieldname": "rm_id",
@@ -45,11 +34,6 @@
   {
    "fieldname": "column_break_aqsz",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "date_time",
-   "fieldtype": "Datetime",
-   "label": "Date Time"
   },
   {
    "fieldname": "rm_qty",
@@ -71,12 +55,16 @@
    "fieldname": "p_qty",
    "fieldtype": "Float",
    "label": "Pending Qty"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-05-10 18:58:17.287003",
+ "modified": "2025-06-13 16:07:10.775900",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "RM Batch",
@@ -92,7 +80,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],

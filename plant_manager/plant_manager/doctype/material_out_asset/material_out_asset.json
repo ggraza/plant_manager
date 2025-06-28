@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-14 13:58:07.177166",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "component_code",
+  "uom",
+  "cost_per_uom",
+  "from_warehouse",
+  "total_cost",
+  "column_break_qxhb",
+  "hsn_sac_code",
+  "qty",
+  "reason_for_movement",
+  "to_warehouse",
+  "pending_qty"
+ ],
+ "fields": [
+  {
+   "fieldname": "component_code",
+   "fieldtype": "Link",
+   "label": "Component Code",
+   "options": "Component"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM_"
+  },
+  {
+   "fieldname": "cost_per_uom",
+   "fieldtype": "Float",
+   "label": "Cost per UOM"
+  },
+  {
+   "fieldname": "from_warehouse",
+   "fieldtype": "Link",
+   "label": "From Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Float",
+   "label": "Total Cost"
+  },
+  {
+   "fieldname": "column_break_qxhb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hsn_sac_code",
+   "fieldtype": "Data",
+   "label": "HSN/SAC Code"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "reason_for_movement",
+   "fieldtype": "Data",
+   "label": "Reason for Movement"
+  },
+  {
+   "fieldname": "to_warehouse",
+   "fieldtype": "Link",
+   "label": "To Warehouse",
+   "options": "Stock Warehouse"
+  },
+  {
+   "fieldname": "pending_qty",
+   "fieldtype": "Float",
+   "label": "Pending Qty"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-16 12:34:25.510319",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Material Out Asset",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

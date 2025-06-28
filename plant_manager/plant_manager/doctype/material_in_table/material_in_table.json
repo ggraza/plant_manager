@@ -15,10 +15,14 @@
   "component_name",
   "qty",
   "t_wh",
-  "is_rwop",
   "completed_process",
+  "operation_status",
   "reference_section",
-  "material_out"
+  "material_out",
+  "duration",
+  "column_break_qxum",
+  "mo_date",
+  "dur_min"
  ],
  "fields": [
   {
@@ -72,14 +76,7 @@
    "fieldname": "completed_process",
    "fieldtype": "Link",
    "label": "Completed Process",
-   "mandatory_depends_on": "eval:doc.is_rwop=='0'",
    "options": "Process Operation"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_rwop",
-   "fieldtype": "Check",
-   "label": "is Returned Without Operation ?"
   },
   {
    "fieldname": "reference_section",
@@ -88,21 +85,45 @@
   },
   {
    "fieldname": "material_out",
-   "fieldtype": "Link",
-   "label": "Material Out",
-   "options": "Material Out"
+   "fieldtype": "Data",
+   "label": "Material Out"
   },
   {
    "fieldname": "uom",
    "fieldtype": "Link",
    "label": "U.O.M",
    "options": "UOM_"
+  },
+  {
+   "fieldname": "operation_status",
+   "fieldtype": "Link",
+   "label": "Operation Status",
+   "options": "Operation Status"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "column_break_qxum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mo_date",
+   "fieldtype": "Datetime",
+   "label": "Material Out Date"
+  },
+  {
+   "fieldname": "dur_min",
+   "fieldtype": "Float",
+   "label": "Duration in min"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-05 13:24:56.949804",
+ "modified": "2025-06-24 17:08:51.152377",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Material In Table",

@@ -34,8 +34,15 @@ class ProductionWorkOrder(Document):
 								'sid':data[d].sequence_id,
 								'opt_id':data[d].operation_code,
 								'opt_name':data[d].operation_name,
+								't_qty': 0,
 								'p_qty':self.pwo_qty,
-								
+								'moved_to_vendor': 0,
+								'o_rwk_qty': 0,
+								'o_rej_qty':0,
+								'o_comp_qty':0,
+								'o_conv_qty':0,
+								'waiting_qty':0,
+								'auto_waiting_qty':0
 							}
 						)
 		self.load_calculations()
@@ -167,4 +174,4 @@ class ProductionWorkOrder(Document):
 		if self.pwo_qty == self.disp_qty + self.conv_qty + self.rej_qty:
 			self.pwo_status = "Closed"
 
-		self.save()		
+		self.save(ignore_permissions=True)		

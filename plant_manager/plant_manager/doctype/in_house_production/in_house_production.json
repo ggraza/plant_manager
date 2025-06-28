@@ -1,25 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{p_date}-{employee}",
  "creation": "2025-01-24 19:35:00.707992",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "basic_section",
   "employee",
+  "login_date_time",
   "column_break_dytw",
-  "login_date",
+  "p_date",
+  "logout_date_time",
+  "status_tab",
   "production_log_table_section",
   "production_log",
-  "status_tab",
-  "section_break_oj2g",
-  "amended_from"
+  "manual_labour_log_tab",
+  "amended_from",
+  "mll"
  ],
  "fields": [
-  {
-   "fieldname": "section_break_oj2g",
-   "fieldtype": "Section Break"
-  },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
@@ -46,11 +46,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "login_date",
-   "fieldtype": "Date",
-   "label": "Login Date"
-  },
-  {
    "fieldname": "production_log_table_section",
    "fieldtype": "Section Break",
    "label": "Production Log Table"
@@ -64,16 +59,43 @@
   {
    "fieldname": "status_tab",
    "fieldtype": "Tab Break",
-   "label": "Status"
+   "label": "Machine Log"
+  },
+  {
+   "fieldname": "login_date_time",
+   "fieldtype": "Datetime",
+   "label": "Login Date Time"
+  },
+  {
+   "fieldname": "logout_date_time",
+   "fieldtype": "Datetime",
+   "label": "Logout Date Time"
+  },
+  {
+   "fieldname": "p_date",
+   "fieldtype": "Date",
+   "label": "Production Date"
+  },
+  {
+   "fieldname": "manual_labour_log_tab",
+   "fieldtype": "Tab Break",
+   "label": "Manual Labour Log"
+  },
+  {
+   "fieldname": "mll",
+   "fieldtype": "Table",
+   "label": "Manual Labour Log",
+   "options": "Manual Labour Log"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-24 19:56:03.701970",
+ "modified": "2025-06-10 17:38:42.209121",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "In-House Production",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
