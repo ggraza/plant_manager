@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-11 18:19:22.189109",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_id",
+  "asset_group",
+  "search_id",
+  "column_break_gtmn",
+  "purchased_date",
+  "type_of_consumption",
+  "qty",
+  "current_satus_section",
+  "issued_date",
+  "issued_to",
+  "to_machine",
+  "for_component",
+  "current_location",
+  "column_break_qfbu",
+  "usage_info",
+  "logs_section",
+  "table_bsju"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_id",
+   "fieldtype": "Data",
+   "label": "Asset ID"
+  },
+  {
+   "fieldname": "asset_group",
+   "fieldtype": "Link",
+   "label": "Asset Group",
+   "options": "Asset Group"
+  },
+  {
+   "fieldname": "search_id",
+   "fieldtype": "Data",
+   "label": "Search ID"
+  },
+  {
+   "fieldname": "column_break_gtmn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchased_date",
+   "fieldtype": "Date",
+   "label": "Purchased Date"
+  },
+  {
+   "fieldname": "type_of_consumption",
+   "fieldtype": "Select",
+   "label": "Type of Consumption",
+   "options": "\nSingle-use\nMulti-use\nInexhaustible"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "current_satus_section",
+   "fieldtype": "Section Break",
+   "label": "Current Satus"
+  },
+  {
+   "fieldname": "issued_date",
+   "fieldtype": "Date",
+   "label": "Issued Date"
+  },
+  {
+   "fieldname": "issued_to",
+   "fieldtype": "Link",
+   "label": "Issued to",
+   "options": "Work Force"
+  },
+  {
+   "fieldname": "to_machine",
+   "fieldtype": "Link",
+   "label": "To Machine",
+   "options": "Machine and Equipment List"
+  },
+  {
+   "fieldname": "for_component",
+   "fieldtype": "Link",
+   "label": "For Component",
+   "options": "Component"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Data",
+   "label": "Current Location"
+  },
+  {
+   "fieldname": "column_break_qfbu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "usage_info",
+   "fieldtype": "Text",
+   "label": "Usage Info"
+  },
+  {
+   "fieldname": "logs_section",
+   "fieldtype": "Section Break",
+   "label": "Logs"
+  },
+  {
+   "fieldname": "table_bsju",
+   "fieldtype": "Table",
+   "options": "Asset Usage Log"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-09 18:41:44.908716",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Asset",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

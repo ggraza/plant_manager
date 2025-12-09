@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-19 14:22:00.087470",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_name",
+  "is_a_sub_task",
+  "task_description",
+  "main_task",
+  "section_break_ipkf",
+  "priority",
+  "status",
+  "due_date",
+  "column_break_adzn",
+  "task_category",
+  "task_type",
+  "assign_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "label": "Task Name"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "label": "Task description"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nUrgent\nHigh\nMedium\nLow\nVery Low"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nNot Started\nIn-Progress\nWaiting for input\nOn Hold\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "section_break_ipkf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_adzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Link",
+   "label": "Task Type",
+   "options": "Task Type"
+  },
+  {
+   "fieldname": "task_category",
+   "fieldtype": "Link",
+   "label": "Task Category ",
+   "options": "Task category"
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign to",
+   "options": "User"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_a_sub_task",
+   "fieldtype": "Check",
+   "label": "is a sub task"
+  },
+  {
+   "fieldname": "main_task",
+   "fieldtype": "Link",
+   "label": "Main Task",
+   "options": "Task Manager"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-02 15:16:51.571606",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Task Manager",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

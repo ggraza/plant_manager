@@ -25,15 +25,21 @@
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "sid",
    "fieldtype": "Int",
-   "label": "Sequence ID"
+   "in_list_view": 1,
+   "label": "Sequence ID",
+   "width": "1"
   },
   {
+   "columns": 4,
    "fetch_from": "opt_id.operation_name",
    "fieldname": "opt_name",
    "fieldtype": "Data",
-   "label": "Operation Name"
+   "in_list_view": 1,
+   "label": "Operation Name",
+   "width": "1"
   },
   {
    "fieldname": "process_status_section",
@@ -46,15 +52,21 @@
   },
   {
    "allow_on_submit": 1,
+   "columns": 2,
    "fieldname": "t_qty",
    "fieldtype": "Float",
-   "label": "Total Qty"
+   "in_list_view": 1,
+   "label": "Total Qty",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 5,
    "fieldname": "p_qty",
    "fieldtype": "Float",
-   "label": "Pending Qty"
+   "in_list_view": 1,
+   "label": "Pending Qty",
+   "width": "1"
   },
   {
    "fieldname": "production_status_report_section",
@@ -78,51 +90,70 @@
    "label": "Auto Waiting Qty"
   },
   {
+   "columns": 3,
    "fieldname": "opt_id",
    "fieldtype": "Link",
    "label": "Operation ID",
-   "options": "Process Operation"
+   "options": "Process Operation",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 6,
    "fieldname": "moved_to_vendor",
    "fieldtype": "Float",
-   "label": "Vendor Qty"
+   "in_list_view": 1,
+   "label": "Vendor Qty",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 7,
    "fieldname": "o_rwk_qty",
    "fieldtype": "Float",
-   "label": "Rework"
+   "in_list_view": 1,
+   "label": "Rework",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 8,
    "fieldname": "o_rej_qty",
    "fieldtype": "Float",
-   "label": "Rejection"
+   "in_list_view": 1,
+   "label": "Rejection",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 9,
    "fieldname": "o_conv_qty",
    "fieldtype": "Float",
-   "label": "Conversion"
+   "in_list_view": 1,
+   "label": "Conversion",
+   "width": "1"
   },
   {
    "allow_on_submit": 1,
+   "columns": 10,
    "fieldname": "o_comp_qty",
    "fieldtype": "Float",
-   "label": "Completed Qty"
+   "in_list_view": 1,
+   "label": "Completed Qty",
+   "width": "1"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-07 11:44:55.647395",
+ "modified": "2025-11-22 19:27:22.475808",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "PWO Process Table",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
