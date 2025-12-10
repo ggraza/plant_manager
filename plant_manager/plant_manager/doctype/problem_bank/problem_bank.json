@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-10 17:23:18.492446",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "date",
+  "component",
+  "process_name",
+  "defect_desc",
+  "problem_identified_by",
+  "column_break_zeai",
+  "is_product_failure",
+  "qty",
+  "lost_minutes",
+  "severity_of_defect",
+  "resposibility",
+  "frequency",
+  "qa_action_section",
+  "quality_alert",
+  "column_break_xfec",
+  "containment_action",
+  "column_break_gizf",
+  "interim_action",
+  "facts_cause_ideas_section",
+  "sop",
+  "table_ddtm",
+  "ideas_to_solve_problem",
+  "permanent_solution_section",
+  "permanent_action",
+  "date_of_action",
+  "changes_in",
+  "failure_mode_effective_analysis_section",
+  "fmea_details",
+  "kaizen_and_docs_section",
+  "parallel_implementation",
+  "column_break_tpkw",
+  "lesson_learnt",
+  "column_break_bpjg",
+  "technical_know_how"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "component",
+   "fieldtype": "Link",
+   "label": "Component",
+   "options": "Component"
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "label": "Process Name"
+  },
+  {
+   "fieldname": "defect_desc",
+   "fieldtype": "Small Text",
+   "label": "Defect / Failure mode Description "
+  },
+  {
+   "fieldname": "column_break_zeai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_product_failure",
+   "fieldtype": "Check",
+   "label": "is Product failure"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty "
+  },
+  {
+   "fieldname": "lost_minutes",
+   "fieldtype": "Float",
+   "label": "Lost Minutes"
+  },
+  {
+   "fieldname": "severity_of_defect",
+   "fieldtype": "Select",
+   "label": "Severity of Defect ",
+   "options": "\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "resposibility",
+   "fieldtype": "Link",
+   "label": "Resposibility",
+   "options": "Work Force"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "\nNew\nRepeat"
+  },
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic "
+  },
+  {
+   "fieldname": "qa_action_section",
+   "fieldtype": "Section Break",
+   "label": "QA Action"
+  },
+  {
+   "description": "Actions taken to communicate issue to operator, responsible person & Problem solver. ",
+   "fieldname": "quality_alert",
+   "fieldtype": "Small Text",
+   "label": "Quality Alert"
+  },
+  {
+   "fieldname": "column_break_xfec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Action taken to protect the part from moving to next process or customer",
+   "fieldname": "containment_action",
+   "fieldtype": "Small Text",
+   "label": "Containment Action"
+  },
+  {
+   "fieldname": "column_break_gizf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Immediate action or temporary action taken to avoid the re-occurrence of the issue. (First Aid)",
+   "fieldname": "interim_action",
+   "fieldtype": "Small Text",
+   "label": "Interim Action"
+  },
+  {
+   "fieldname": "problem_identified_by",
+   "fieldtype": "Link",
+   "label": "Problem Identified By",
+   "options": "Work Force"
+  },
+  {
+   "fieldname": "table_ddtm",
+   "fieldtype": "Table",
+   "label": "Problem Reasons",
+   "options": "Problem Reason"
+  },
+  {
+   "fieldname": "ideas_to_solve_problem",
+   "fieldtype": "Table",
+   "label": "Ideas to solve Problem",
+   "options": "Problem idea"
+  },
+  {
+   "fieldname": "sop",
+   "fieldtype": "Small Text",
+   "label": "SOP of process / Inspection"
+  },
+  {
+   "fieldname": "facts_cause_ideas_section",
+   "fieldtype": "Section Break",
+   "label": "Facts Cause Ideas "
+  },
+  {
+   "fieldname": "permanent_solution_section",
+   "fieldtype": "Section Break",
+   "label": "Permanent Solution"
+  },
+  {
+   "fieldname": "permanent_action",
+   "fieldtype": "Small Text",
+   "label": "Permanent action"
+  },
+  {
+   "fieldname": "date_of_action",
+   "fieldtype": "Date",
+   "label": "Date of action"
+  },
+  {
+   "fieldname": "changes_in",
+   "fieldtype": "Select",
+   "label": "Changes in",
+   "options": "\nMan\nMachine\nMaterial\nMethod"
+  },
+  {
+   "fieldname": "failure_mode_effective_analysis_section",
+   "fieldtype": "Section Break",
+   "label": "Failure Mode Effective Analysis"
+  },
+  {
+   "fieldname": "fmea_details",
+   "fieldtype": "Small Text",
+   "label": "FMEA Details"
+  },
+  {
+   "fieldname": "kaizen_and_docs_section",
+   "fieldtype": "Section Break",
+   "label": "Kaizen and Docs"
+  },
+  {
+   "fieldname": "parallel_implementation",
+   "fieldtype": "Small Text",
+   "label": "Parallel Implementation"
+  },
+  {
+   "fieldname": "column_break_tpkw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lesson_learnt",
+   "fieldtype": "Small Text",
+   "label": "Lesson Learnt"
+  },
+  {
+   "fieldname": "column_break_bpjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technical_know_how",
+   "fieldtype": "Small Text",
+   "label": "Technical Know How"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-10 19:58:21.634093",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Problem Bank",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

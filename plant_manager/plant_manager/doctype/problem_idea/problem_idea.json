@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-10 19:21:18.525635",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "idea_given_by",
+  "idea_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "idea_given_by",
+   "fieldtype": "Link",
+   "label": "Idea given by",
+   "options": "Work Force"
+  },
+  {
+   "fieldname": "idea_description",
+   "fieldtype": "Small Text",
+   "label": "Idea description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-10 19:23:34.484013",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Problem idea",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
