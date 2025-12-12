@@ -5,6 +5,7 @@ app_description = "Production status and Inventory Management System"
 app_email = "bhargvn17@gmail.com"
 app_license = "mit"
 
+
 # Apps
 # ------------------
 
@@ -83,7 +84,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "plant_manager.install.before_install"
-# after_install = "plant_manager.install.after_install"
+after_install = "plant_manager.install.after_install"
 
 # Uninstallation
 # ------------

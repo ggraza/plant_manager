@@ -1,24 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-12-02 14:32:53.054564",
+ "creation": "2025-12-11 19:03:57.214848",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "task_category_name"
+  "task_category_section",
+  "task_category"
  ],
  "fields": [
   {
-   "fieldname": "task_category_name",
+   "fieldname": "task_category_section",
+   "fieldtype": "Section Break",
+   "label": "Task category"
+  },
+  {
+   "fieldname": "task_category",
    "fieldtype": "Data",
-   "label": "Task Category Name"
+   "label": "Task category"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "issingle": 1,
  "links": [],
- "modified": "2025-12-02 14:33:31.451820",
+ "modified": "2025-12-11 19:04:21.092427",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Task category",
@@ -28,8 +33,10 @@
    "create": 1,
    "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
+   "report": 1,
    "role": "System Manager",
    "share": 1,
    "write": 1

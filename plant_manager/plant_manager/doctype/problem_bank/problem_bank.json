@@ -39,7 +39,9 @@
   "column_break_tpkw",
   "lesson_learnt",
   "column_break_bpjg",
-  "technical_know_how"
+  "technical_know_how",
+  "docs_images_etc_section",
+  "attachments"
  ],
  "fields": [
   {
@@ -223,12 +225,22 @@
    "fieldname": "technical_know_how",
    "fieldtype": "Small Text",
    "label": "Technical Know How"
+  },
+  {
+   "fieldname": "docs_images_etc_section",
+   "fieldtype": "Section Break",
+   "label": "Docs Images etc"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-10 19:58:21.634093",
+ "modified": "2025-12-11 19:29:09.039912",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Problem Bank",
