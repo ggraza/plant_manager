@@ -59,9 +59,10 @@
    "options": "Vendor Component Details"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-06 18:53:18.586487",
+ "modified": "2025-12-13 17:55:36.357025",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Vendor",
@@ -79,8 +80,19 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "T-QC Inspectors",
+   "select": 1,
+   "share": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

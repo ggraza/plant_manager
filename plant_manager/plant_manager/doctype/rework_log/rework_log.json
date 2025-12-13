@@ -53,10 +53,11 @@
    "fieldtype": "Section Break"
   }
  ],
+ "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-10 12:48:28.781302",
+ "modified": "2025-12-13 17:53:04.029113",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Rework Log",
@@ -74,8 +75,34 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "T-QC Inspectors",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "T-QC Inspectors",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
