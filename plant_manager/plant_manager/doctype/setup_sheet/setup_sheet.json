@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{component}-{operation}",
+ "creation": "2026-02-07 12:22:14.512046",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "component",
+  "operation",
+  "work_holding_section",
+  "work_holding",
+  "work_holding_preview",
+  "asb",
+  "alignment_region",
+  "stopper_region",
+  "bottom_block",
+  "other_accesscories",
+  "after_holding",
+  "work_offset_section",
+  "work_offset__x",
+  "x_move",
+  "column_break_rfxy",
+  "work_offset__y",
+  "y_move",
+  "column_break_nssk",
+  "work_offset__z",
+  "z_move",
+  "tool_list_n_specification_section",
+  "tool_list",
+  "tool_application_n_quality_section",
+  "tool_application_n_quality",
+  "setup_check_list_section",
+  "table_jyob"
+ ],
+ "fields": [
+  {
+   "fieldname": "component",
+   "fieldtype": "Link",
+   "label": "Component",
+   "options": "Component",
+   "unique": 1
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Process Operation"
+  },
+  {
+   "fieldname": "tool_list",
+   "fieldtype": "Table",
+   "label": "Tool List",
+   "options": "Setup Sheet Tool List"
+  },
+  {
+   "fieldname": "work_holding_section",
+   "fieldtype": "Section Break",
+   "label": "Work Holding"
+  },
+  {
+   "fieldname": "work_holding",
+   "fieldtype": "Attach Image",
+   "label": "Work Holding"
+  },
+  {
+   "fieldname": "work_holding_preview",
+   "fieldtype": "Image",
+   "label": "Work Holding Preview",
+   "options": "work_holding"
+  },
+  {
+   "fieldname": "work_offset_section",
+   "fieldtype": "Section Break",
+   "label": "Work Offset"
+  },
+  {
+   "fieldname": "work_offset__x",
+   "fieldtype": "Select",
+   "label": "Work offset  X",
+   "options": "\nBlock Centre\nLeft\nLeft Move\nRight\nRight Move\nNone"
+  },
+  {
+   "fieldname": "work_offset__y",
+   "fieldtype": "Select",
+   "label": "Work offset  Y",
+   "options": "\nBlock Centre\nRear\nRear Move\nFront\nFront Move\nNone"
+  },
+  {
+   "fieldname": "work_offset__z",
+   "fieldtype": "Select",
+   "label": "Work offset  Z",
+   "options": "\nBlock Centre\nTop\nTop Move\nBottom\nBottom Move\nNone"
+  },
+  {
+   "fieldname": "x_move",
+   "fieldtype": "Data",
+   "label": "X move"
+  },
+  {
+   "fieldname": "column_break_rfxy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "y_move",
+   "fieldtype": "Data",
+   "label": "Y move "
+  },
+  {
+   "fieldname": "column_break_nssk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "z_move",
+   "fieldtype": "Select",
+   "label": "Z move",
+   "options": "\nBlock Centre\nRear\nRear Move\nFront\nFront Move\nNone"
+  },
+  {
+   "description": "Alignment, Stopper, Bottom Block & its Inspection check list",
+   "fieldname": "asb",
+   "fieldtype": "Small Text",
+   "label": "Alignment Stopper Bottom_Block"
+  },
+  {
+   "fieldname": "alignment_region",
+   "fieldtype": "Attach",
+   "label": "Alignment Region"
+  },
+  {
+   "fieldname": "stopper_region",
+   "fieldtype": "Attach",
+   "label": "Stopper region"
+  },
+  {
+   "fieldname": "bottom_block",
+   "fieldtype": "Attach",
+   "label": "Bottom Block"
+  },
+  {
+   "fieldname": "other_accesscories",
+   "fieldtype": "Attach",
+   "label": "Other Accesscories"
+  },
+  {
+   "fieldname": "after_holding",
+   "fieldtype": "Attach",
+   "label": "After Holding"
+  },
+  {
+   "fieldname": "tool_application_n_quality_section",
+   "fieldtype": "Section Break",
+   "label": "Tool Application & Quality"
+  },
+  {
+   "fieldname": "tool_application_n_quality",
+   "fieldtype": "Table",
+   "label": "Tool Application N Quality",
+   "options": "Setup Sheet Quality"
+  },
+  {
+   "fieldname": "tool_list_n_specification_section",
+   "fieldtype": "Section Break",
+   "label": "Tool list & Specification"
+  },
+  {
+   "fieldname": "setup_check_list_section",
+   "fieldtype": "Section Break",
+   "label": "Setup Check List"
+  },
+  {
+   "fieldname": "table_jyob",
+   "fieldtype": "Table",
+   "options": "Setup Sheet Inspection Check List"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-25 20:08:17.588883",
+ "modified_by": "Administrator",
+ "module": "Plant Manager",
+ "name": "Setup Sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "T- Machine Setter",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "T- Machine Setter",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
