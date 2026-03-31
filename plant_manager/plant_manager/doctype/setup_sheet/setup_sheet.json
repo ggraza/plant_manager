@@ -10,20 +10,27 @@
   "operation",
   "work_holding_section",
   "work_holding",
-  "work_holding_preview",
+  "stopper_id",
+  "bottom_block_id",
+  "other_accessories_id",
   "asb",
-  "alignment_region",
-  "stopper_region",
-  "bottom_block",
-  "other_accesscories",
+  "column_break_yxfh",
+  "work_holding_url",
+  "stopper_url",
+  "bottom_block_url",
+  "other_accessories_url",
+  "alignment_url",
   "after_holding",
   "work_offset_section",
+  "where_x",
   "work_offset__x",
   "x_move",
   "column_break_rfxy",
+  "where_y",
   "work_offset__y",
   "y_move",
   "column_break_nssk",
+  "where_z",
   "work_offset__z",
   "z_move",
   "tool_list_n_specification_section",
@@ -60,14 +67,9 @@
   },
   {
    "fieldname": "work_holding",
-   "fieldtype": "Attach Image",
-   "label": "Work Holding"
-  },
-  {
-   "fieldname": "work_holding_preview",
-   "fieldtype": "Image",
-   "label": "Work Holding Preview",
-   "options": "work_holding"
+   "fieldtype": "Link",
+   "label": "Work Holding ID",
+   "options": "Machine Tool Accessory"
   },
   {
    "fieldname": "work_offset_section",
@@ -123,28 +125,8 @@
    "label": "Alignment Stopper Bottom_Block"
   },
   {
-   "fieldname": "alignment_region",
-   "fieldtype": "Attach",
-   "label": "Alignment Region"
-  },
-  {
-   "fieldname": "stopper_region",
-   "fieldtype": "Attach",
-   "label": "Stopper region"
-  },
-  {
-   "fieldname": "bottom_block",
-   "fieldtype": "Attach",
-   "label": "Bottom Block"
-  },
-  {
-   "fieldname": "other_accesscories",
-   "fieldtype": "Attach",
-   "label": "Other Accesscories"
-  },
-  {
    "fieldname": "after_holding",
-   "fieldtype": "Attach",
+   "fieldtype": "Data",
    "label": "After Holding"
   },
   {
@@ -172,12 +154,73 @@
    "fieldname": "table_jyob",
    "fieldtype": "Table",
    "options": "Setup Sheet Inspection Check List"
+  },
+  {
+   "fieldname": "where_x",
+   "fieldtype": "Data",
+   "label": "Where to offset X"
+  },
+  {
+   "fieldname": "where_y",
+   "fieldtype": "Data",
+   "label": "Where to offset Y"
+  },
+  {
+   "fieldname": "where_z",
+   "fieldtype": "Data",
+   "label": "Where to offset Z"
+  },
+  {
+   "fieldname": "stopper_id",
+   "fieldtype": "Link",
+   "label": "Stopper ID",
+   "options": "Machine Tool Accessory"
+  },
+  {
+   "fieldname": "bottom_block_id",
+   "fieldtype": "Link",
+   "label": "Bottom Block ID",
+   "options": "Machine Tool Accessory"
+  },
+  {
+   "fieldname": "other_accessories_id",
+   "fieldtype": "Data",
+   "label": "Other accessories ID  "
+  },
+  {
+   "fieldname": "column_break_yxfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_holding_url",
+   "fieldtype": "Data",
+   "label": "Work Holding URL"
+  },
+  {
+   "fieldname": "stopper_url",
+   "fieldtype": "Data",
+   "label": "Stopper URL"
+  },
+  {
+   "fieldname": "bottom_block_url",
+   "fieldtype": "Data",
+   "label": "Bottom Block URL"
+  },
+  {
+   "fieldname": "alignment_url",
+   "fieldtype": "Data",
+   "label": "Alignment URL"
+  },
+  {
+   "fieldname": "other_accessories_url",
+   "fieldtype": "Data",
+   "label": "Other Accessories URL "
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-25 20:08:17.588883",
+ "modified": "2026-03-31 14:16:33.461522",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Setup Sheet",

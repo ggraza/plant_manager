@@ -12,4 +12,3 @@ frappe.ui.form.on("Setup Sheet", {
         });
     }
 });
-
