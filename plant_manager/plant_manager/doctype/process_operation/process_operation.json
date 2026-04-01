@@ -12,14 +12,15 @@
   "operation_type",
   "is_manual_operation",
   "details_section",
-  "operation_code",
   "comp_code",
+  "operation_code",
   "column_break_tdvu",
-  "operation_name",
   "comp_name",
+  "operation_name",
   "description_section",
   "detail_description",
-  "operation_station_tab"
+  "operation_station_tab",
+  "workstation_type"
  ],
  "fields": [
   {
@@ -42,7 +43,7 @@
    "fieldname": "operation_code",
    "fieldtype": "Data",
    "label": "Operation Code",
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "comp_code",
@@ -59,7 +60,8 @@
   {
    "fieldname": "operation_name",
    "fieldtype": "Data",
-   "label": "Operation Name"
+   "label": "Operation Name",
+   "reqd": 1
   },
   {
    "fetch_from": "comp_code.component_name",
@@ -101,13 +103,21 @@
    "fieldname": "operation_type",
    "fieldtype": "Link",
    "label": "Operation Type",
-   "options": "Process Operation Type"
+   "options": "Process Operation Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workstation_type",
+   "fieldtype": "Table MultiSelect",
+   "label": "Workstation Type",
+   "options": "Process Operation Workstation",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-31 16:56:53.106349",
+ "modified": "2026-04-01 12:25:38.091092",
  "modified_by": "Administrator",
  "module": "Plant Manager",
  "name": "Process Operation",
